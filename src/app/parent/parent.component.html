@@ -1,0 +1,48 @@
+
+<div class="page-area">
+    <div class="text-center">
+        <h2>  Buy Product</h2>
+    </div>
+<div class="alert alert-light d-flex " *ngIf="addProduct">
+    <p> <strong class="text-success"> {{addProduct}} </strong> is selected added in cart </p>
+    <button class="btn btn-success ml-auto"> Check out </button>
+</div>
+<div class="row ">
+    <div class="col-md-12 py-4 d-flex">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../image/images.jpg"  alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Mobile</h5>
+              <button class="btn btn-success" (click)="selectProduct('mobile')"> Select product </button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../image/images.jpg"  alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Laptop</h5>
+               <button class="btn btn-success" (click)="selectProduct('laptop')"> Select product </button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../image/images.jpg"  alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Washing Machine</h5>
+               <button class="btn btn-success" (click)="selectProduct('Washing Machine')"> Select product </button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../image/images.jpg"  alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Freez</h5>
+               <button class="btn btn-success" (click)="selectProduct('Freez')"> Select product </button>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-12 text-center py-4 bg-success text-white ">
+        <h2 *ngIf="!isSelect"> Please select any product </h2>
+        <h2 *ngIf="isSelect"> {{productSelected}} is selected </h2>
+        <button class="btn btn-primary" (click)="addedProduct()"> Add to cart</button>
+    </div>
+</div>
+
+</div>

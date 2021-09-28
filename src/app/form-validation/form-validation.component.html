@@ -1,0 +1,63 @@
+
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left bg-whitecrounded shadow py-3 m-5">
+            <form (ngSubmit)="onSubmit()" #myForm="ngForm" >
+                <div class="form-group">
+                  <label for="userName" class="form-label">User Name*</label>
+                  <input 
+                        required
+                        userName
+                        type="text" 
+                        class="form-control" 
+                        id="userName"
+                        name="userName"
+                        placeholder="Enter user name"
+                        ngModel
+                        #userName="ngModel"
+                        >
+                 <small class="text-danger" *ngIf="userName.touched">Please Enter Valid Name</small> 
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email*</label>
+                  <input
+                        required
+                        email
+                        type="text" 
+                        class="form-control" 
+                        id="email"
+                        name="email"
+                        placeholder="Enter email"
+                        ngModel
+                        #email="ngModel"
+                   >
+                   <small class="text-danger" *ngIf="!email.valid && email.touched">Please Enter Valid Email</small>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" >Courses</label>
+                  <select 
+                        required
+                        course
+                        class= "form-select"
+                        name="courses" 
+                        [ngModel]="defaultSelector"  
+                        ngModel
+                        #course="ngModel"
+                        >
+                      <option value="default">Select Courcess</option>
+                      <option value="Angular">Angular</option>
+                      <option value="Nodejs">Nodejs</option>
+                      <option value="React">React</option>
+                  </select>
+
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
+              </form>
+        </div>
+       
+    </div>
+</div>
+
+
+

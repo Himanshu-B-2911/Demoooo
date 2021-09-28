@@ -1,0 +1,89 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left bg-whitecrounded shadow py-3 m-5">
+            <form (ngSubmit)="onSubmit()" #myForm="ngForm" >
+                <div class="form-group">
+                  <label for="userName" class="form-label">User Name</label>
+                  <input 
+                        type="text" 
+                        class="form-control" 
+                        id="userName"
+                        name="userName"
+                        placeholder="Enter user name"
+                        ngModel
+                        #inputRef
+                         
+                        >
+                   
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                        type="text" 
+                        class="form-control" 
+                        id="email"
+                        name="email"
+                        placeholder="Enter email"
+                        ngModel
+                      
+                   >
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">DOB*</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="date"
+                    name="date"
+                    placeholder="dd/mm/yy"
+                    ngModel
+                  >
+                  </div>
+                
+                <div class="form-group">
+                  <label class="form-label" >Courses</label>
+                  <select class= "form-select" name="Courses" [ngModel]="selected" >
+                   
+                      <option value="Angular">Angular</option>
+                      <option value="Nodejs">Nodejs</option>
+                      <option value="React">React</option>
+                  </select>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+       
+    </div>
+</div>
+
+<!-- <div class="container pt-6 m-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <app-ng-content-card>
+        <h5 class="card-title">Mobile</h5>
+        <button class="btn btn-primary ">  Know More About Mobile  </button>
+        
+      </app-ng-content-card>
+    </div>
+    <div class="col-md-6">
+      <app-ng-content-card>
+        <h5 class="card-title">TV</h5>
+        <button class="btn btn-primary "> Know More About TV  </button>
+      </app-ng-content-card>
+    </div>
+    <div class="col-md-6">
+      <app-ng-content-card>
+        <h5 class="card-title">Washing Machine</h5>
+        <button class="btn btn-primary ">  Know More About Washing Machine  </button>
+      </app-ng-content-card>
+    </div>
+    <div class="col-md-6">
+      <app-ng-content-card>
+        <h5 class="card-title">Laptop</h5>
+        <button class="btn btn-primary "> Know More About Laptop </button>
+      </app-ng-content-card>
+    </div>
+  </div>
+</div> -->
