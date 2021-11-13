@@ -9,7 +9,8 @@ export class IOParentComponent implements OnInit {
   isproSelect:boolean = false;
   proSelected :any;
   addProduct : any;
-
+  demoData : any;
+ 
   constructor() { }
 
   ngOnInit(): void {
@@ -27,6 +28,10 @@ export class IOParentComponent implements OnInit {
     console.log(proData);
     this.addProduct = proData;
      
+  }
+
+  onAddDemo(data:any){
+    this.demoData=data;
   }
 
   

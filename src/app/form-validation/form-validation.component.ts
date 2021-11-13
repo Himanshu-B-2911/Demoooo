@@ -8,7 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class FormValidationComponent implements OnInit {
 
-  @ViewChild('myForm') myForm : NgForm | undefined
+  @ViewChild('myForm')
+  myForm!: NgForm; 
   defaultSelector = "default"
   constructor() { }
 

@@ -1,5 +1,7 @@
 <div class="col-md-12 text-center py-4 bg-success text-white ">
+    
     <h2 *ngIf="!isSelect"> Please select any product </h2>
     <h2 *ngIf="isSelect"> {{productSelected}} is selected </h2>
-    <button class="btn btn-primary" (click)="addedProduct()"> Add to cart</button>
+    <button class="btn btn-primary" (click)="addedProduct()"> Add to cart</button> &nbsp;
+    <button class="btn btn-primary" (click)="demoTest()"> Demo</button>
 </div>

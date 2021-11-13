@@ -7,6 +7,7 @@
     <p> <strong class="text-success"> {{addProduct}} </strong> is selected added in cart </p>
     <button class="btn btn-success ml-auto"> Check out </button>
 </div>
+<div> {{demoData}} </div>
 <div class="row ">
     <div class="col-md-12 py-4 d-flex">
         <div class="card" style="width: 18rem;">
@@ -42,6 +43,7 @@
         [isSelect]="isproSelect" 
         [productSelected]="proSelected"
         (addProduct)="onAddProduct($event)"
+        (demoProduct)="onAddDemo($event)"
     ></app-io-child>
 </div>
 

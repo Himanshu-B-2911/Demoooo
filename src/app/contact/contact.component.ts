@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 
 
 @Component({
@@ -9,13 +9,18 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent implements OnInit, AfterViewInit {
 @Input() nameP : any;
+
+
+//-------- Reactive From--------
+
+ registerForm!: FormGroup;
   
 name="Himanshu Ramesh Barapatre";
 selected = "Angular"
 
   @ViewChild('myForm') myForm!: NgForm;
   @ViewChild('inputRef') inputRefer!: ElementRef<any>; 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
   ngAfterViewInit(){
     console.log(this.inputRefer);
     this.inputRefer.nativeElement.focus();
@@ -23,7 +28,7 @@ selected = "Angular"
   }
 
   ngOnInit(): void {
-  console.log(this.nameP);
+   
   }
   
 
@@ -33,6 +38,7 @@ selected = "Angular"
 
   onSubmit(  ){
     console.log(this.myForm);
+    this.myForm.resetForm()
     
   }
  
